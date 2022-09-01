@@ -1,18 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.ui.main.MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/holo_green_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.8">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttn_sound_effect"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_main"
+                android:text="효과음"
+                app:layout_constraintBottom_toTopOf="@id/gl_horizon_center"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/gl_vertical_center"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_sound"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_main"
+                android:text="소리"
+                app:layout_constraintBottom_toTopOf="@id/gl_horizon_center"
+                app:layout_constraintLeft_toRightOf="@id/gl_vertical_center"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_video"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_main"
+                android:text="영상"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/gl_vertical_center"
+                app:layout_constraintTop_toBottomOf="@id/gl_horizon_center" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_record"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_main"
+                android:text="녹음"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/gl_vertical_center"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gl_horizon_center" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_vertical_center"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_horizon_center"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

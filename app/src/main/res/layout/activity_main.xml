@@ -25,7 +25,7 @@
             app:layout_constraintWidth_percent="0.8">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/buttn_sound_effect"
+                android:id="@+id/button_sound_effect"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_margin="5dp"

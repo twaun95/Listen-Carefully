@@ -1,4 +1,6 @@
 package com.twaun95.listencarefully.presentation.ui.video
 
-class VideoActivityViewModel {
+import com.twaun95.listencarefully.base.BaseViewModel
+
+class VideoActivityViewModel : BaseViewModel() {
 }

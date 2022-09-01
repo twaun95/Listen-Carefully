@@ -1,4 +1,6 @@
 package com.twaun95.listencarefully.presentation.ui.soundeffect
 
-class SoundEffectActivityViewModel {
+import com.twaun95.listencarefully.base.BaseViewModel
+
+class SoundEffectActivityViewModel : BaseViewModel() {
 }

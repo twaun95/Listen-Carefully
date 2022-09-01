@@ -26,6 +26,15 @@
         <activity
             android:name=".presentation.ui.sound.SoundActivity"
             android:exported="false" />
+        <activity
+            android:name=".presentation.ui.soundeffect.SoundEffectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.video.VideoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.record.RecordActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

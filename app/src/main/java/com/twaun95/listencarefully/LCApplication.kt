@@ -1,4 +1,4 @@
-package com.twaun95.listencarefully.di
+package com.twaun95.listencarefully
 
 import android.app.Application
 import com.twaun95.listencarefully.di.modules.ManagerModule

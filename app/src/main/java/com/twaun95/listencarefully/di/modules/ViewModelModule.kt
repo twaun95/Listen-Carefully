@@ -14,7 +14,7 @@ object ViewModelModule : KoinModule{
         get() = module {
             viewModel { MainActivityViewModel() }
             viewModel { SoundActivityViewModel() }
-            viewModel { SoundEffectActivityViewModel() }
+            viewModel { SoundEffectActivityViewModel(get()) }
             viewModel { VideoActivityViewModel() }
             viewModel { RecordActivityViewModel() }
         }

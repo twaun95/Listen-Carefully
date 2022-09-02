@@ -8,7 +8,6 @@ enum class Effect(val resourceId : Int){
     WRONG(R.raw.sound_answer_wrong),
     CORRECT_AFTER_WRONG(R.raw.sound_answer_try),
     BUTTON_SOUND(R.raw.loud_sound_button_click),
-    BUTTON_SOUND_RECORD(R.raw.sound_button_click),
     BUTTON_ELSE(R.raw.the_other_buttons),
     CARD(R.raw.cards),
     LIFE_COUNT(R.raw.life_cut),

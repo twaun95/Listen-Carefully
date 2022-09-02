@@ -12,16 +12,12 @@ class SoundEffect {
 
     companion object {
         const val MAX_STREAM = 10
-        const val SRC_QUALITY = 0
         const val VOLUME = 0.5f
         const val LOOP = 0
         const val RATE = 1.0f
-
         const val PRIORITY_PLAY = 0
         const val PRIORITY_LOAD = 1
-
         const val NOT_PLAYED = -1
-
     }
 
     fun create() {
@@ -35,11 +31,7 @@ class SoundEffect {
                 )
                 .setMaxStreams(MAX_STREAM)
                 .build()
-                .apply {
-            setOnLoadCompleteListener { _, soundId, _ ->
-                play(soundId, VOLUME, VOLUME, PRIORITY_PLAY, LOOP, RATE)
-            }
-        }
+                .apply { setOnLoadCompleteListener { _, soundId, _ -> play(soundId, VOLUME, VOLUME, PRIORITY_PLAY, LOOP, RATE) }}
 
         map = mutableMapOf<Effect, Pair<Int, Int>?>(
             Pair(Effect.SPLASH, null),
@@ -47,12 +39,7 @@ class SoundEffect {
         )
     }
 
-    fun delete() {
-        soundPool.release()
-    }
-
     fun soundPlay(context: Context, effect: Effect) {
-
         map[effect]?.let { sound ->
             map.put(
                 effect,
@@ -69,4 +56,6 @@ class SoundEffect {
             )
         }
     }
+
+    fun delete() = soundPool.release()
 }

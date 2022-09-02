@@ -13,7 +13,6 @@ class SoundEffectActivity : BaseActivity<ActivitySoundEffectBinding, SoundEffect
 
     override fun initView() {
         super.initView()
-
         binding.viewModel = this.viewModel
     }
 
@@ -23,9 +22,7 @@ class SoundEffectActivity : BaseActivity<ActivitySoundEffectBinding, SoundEffect
 
     override fun setEvent() {
         super.setEvent()
-
     }
-
 
     override fun onDestroy() {
         super.onDestroy()

@@ -12,15 +12,9 @@ class SoundEffectActivityViewModel(
         soundEffectManager.initialize()
     }
 
-    fun soundEffectButton() {
-        soundEffectManager.play(Effect.BUTTON_SOUND)
-    }
+    fun soundEffect(effect: Effect) = soundEffectManager.play(effect)
 
-    fun soundEffectCorrect() {
-        soundEffectManager.play(Effect.CORRECT)
-    }
-
-    fun release(){
+    fun release() {
         soundEffectManager.release()
     }
 

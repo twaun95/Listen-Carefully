@@ -6,15 +6,7 @@ class SoundEffectManager(private val androidContext: Context) {
 
     private val queue = mutableListOf<SoundEffect>()
 
-    fun initialize() {
-        queue.add(SoundEffect().apply { this.create() })
-    }
-
-    fun play(soundEffectType : Effect) {
-        queue.last().soundPlay(androidContext, soundEffectType)
-    }
-
-    fun release() {
-        queue.removeFirst().delete()
-    }
+    fun initialize() = queue.add(SoundEffect().apply { this.create() })
+    fun play(soundEffectType : Effect) = queue.last().soundPlay(androidContext, soundEffectType)
+    fun release() = queue.removeFirst().delete()
 }

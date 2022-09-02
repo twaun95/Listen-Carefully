@@ -14,6 +14,13 @@
     <color name="primary_variant">#3A853D</color>
     <color name="test_background">#569C59</color>
 
+    <color name="green1">#B8E3B9</color>
+    <color name="green2">#96CD96</color>
+    <color name="green3">#8CD38E</color>
+    <color name="green4">#53CA57</color>
+    <color name="green5">#48BD4B</color>
+    <color name="green6">#0ABA0E</color>
+
     <color name="mono1">#FFFFFF</color>
     <color name="mono2">#F1F4F8</color>
     <color name="mono3">#E9ECF1</color>

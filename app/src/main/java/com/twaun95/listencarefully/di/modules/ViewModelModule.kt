@@ -13,7 +13,7 @@ object ViewModelModule : KoinModule{
     override val module: Module
         get() = module {
             viewModel { MainActivityViewModel() }
-            viewModel { SoundActivityViewModel() }
+            viewModel { SoundActivityViewModel(get()) }
             viewModel { SoundEffectActivityViewModel(get()) }
             viewModel { VideoActivityViewModel() }
             viewModel { RecordActivityViewModel() }

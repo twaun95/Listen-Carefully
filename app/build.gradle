@@ -47,4 +47,5 @@ dependencies {
     implementation dependenciesSet.glide.okhttp
 
     implementation dependenciesSet.lottie
+    implementation dependenciesSet.exoplayer
 }

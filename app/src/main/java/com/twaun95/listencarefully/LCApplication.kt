@@ -1,7 +1,7 @@
 package com.twaun95.listencarefully
 
 import android.app.Application
-import com.twaun95.listencarefully.di.modules.ManagerModule
+import com.twaun95.listencarefully.di.modules.HandlerModule
 import com.twaun95.listencarefully.di.modules.ViewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -15,7 +15,7 @@ class LCApplication : Application() {
             androidLogger()
             androidContext(this@LCApplication)
             modules(
-                ManagerModule.module,
+                HandlerModule.module,
                 ViewModelModule.module
             )
         }

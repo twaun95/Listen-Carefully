@@ -11,6 +11,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class SoundActivity : BaseActivity<ActivitySoundBinding, SoundActivityViewModel>(R.layout.activity_sound) {
     override val viewModel: SoundActivityViewModel by viewModel()
 
+    // TODO (factory -> singleTon)
     private val exoPlayerHandler1 by inject<ExoPlayerFactory>()
     private val exoPlayerHandler2 by inject<ExoPlayerFactory>()
     private val exoPlayerHandler3 by inject<ExoPlayerFactory>()
@@ -20,9 +21,7 @@ class SoundActivity : BaseActivity<ActivitySoundBinding, SoundActivityViewModel>
 
         binding.player1.player = exoPlayerHandler1.apply { setData(viewModel.playList[0]) }.player
         binding.player2.player = exoPlayerHandler2.apply { setData(viewModel.playList[1]) }.player
-        binding.player3.player = exoPlayerHandler3.apply {
-            setData(viewModel.playList[2])
-        }.player
+        binding.player3.player = exoPlayerHandler3.apply { setData(viewModel.playList[2]) }.player
     }
 
     override fun setObserver() {
@@ -36,5 +35,12 @@ class SoundActivity : BaseActivity<ActivitySoundBinding, SoundActivityViewModel>
 
     override fun onStop() {
         super.onStop()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        exoPlayerHandler1.stopAndReleasePlayer()
+        exoPlayerHandler2.stopAndReleasePlayer()
+        exoPlayerHandler3.stopAndReleasePlayer()
     }
 }

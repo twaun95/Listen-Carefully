@@ -25,12 +25,12 @@
                 android:id="@+id/player_1"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:background="@color/green1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:show_buffering="always"
+                app:played_color="@color/green1"
                 app:auto_show="false"
                 app:use_controller="true"
-                app:resize_mode="fill"
                 app:surface_type="surface_view"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -51,9 +51,10 @@
                 android:layout_height="100dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:show_buffering="always"
+                app:played_color="@color/green1"
                 app:auto_show="false"
                 app:use_controller="true"
-                app:resize_mode="fill"
                 app:surface_type="surface_view"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -73,9 +74,7 @@
                 android:layout_height="100dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:use_artwork="true"
                 app:show_buffering="always"
-                app:default_artwork="@color/green1"
                 app:played_color="@color/green1"
                 app:auto_show="false"
                 app:use_controller="true"

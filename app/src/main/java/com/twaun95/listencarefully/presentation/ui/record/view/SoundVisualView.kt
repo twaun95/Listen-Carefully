@@ -79,6 +79,7 @@ class SoundVisualView(
     }
 
     fun startVisualizing(isReplaying: Boolean) {
+        stopVisualizing()
         this.isReplaying = isReplaying
         handler?.post(visualizeRepeatAction)
     }

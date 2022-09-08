@@ -33,11 +33,15 @@ class RecordActivityViewModel(
     }
 
     fun startPlay() {
-        recordState.value = State.ON_PLAY
-        soundHandler.loadFile { id ->
-            soundLoadId = id
+        if (soundLoadId != SoundManager.INVALID_LOAD_ID) {
             soundHandler.play(soundLoadId, 0, endListener)
-//            recordState.value = State.ON_PLAY
+            recordState.value = State.ON_PLAY
+        } else {
+            soundHandler.loadFile { id ->
+                soundLoadId = id
+                soundHandler.play(soundLoadId, 0, endListener)
+                recordState.value = State.ON_PLAY
+            }
         }
     }
 
@@ -53,9 +57,7 @@ class RecordActivityViewModel(
     }
 
     fun release() {
-        soundHandler.pause(soundLoadId)
-        soundHandler.releaseAll()
+        soundHandler.release(soundLoadId)
         recordHandler.release()
     }
-
 }

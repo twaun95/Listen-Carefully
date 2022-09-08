@@ -11,3 +11,26 @@ All about sound
 - ExoPlayer
 - SoundPool
 - MediaRecorder
+
+
+## 📂 구성
+1. 효과음
+2. 소리 재생
+3. 영상 재생
+4. 녹음
+
+
+### 1. 효과음
+- SoundPool
+
+### 2. 소리 재생
+- ExoPlayer
+
+### 3. 영상 재생
+- ExoPlayer
+
+### 4. 녹음
+- 녹음(MediaRecorder)
+- 재생(ExoPlayer)
+- 재생 카운트
+- 파형 시각화

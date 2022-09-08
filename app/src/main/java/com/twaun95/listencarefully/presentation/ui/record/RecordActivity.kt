@@ -54,4 +54,8 @@ class RecordActivity : BaseActivity<ActivityRecordBinding, RecordActivityViewMod
         }
     }
 
+    override fun onStop() {
+        super.onStop()
+        viewModel.release()
+    }
 }

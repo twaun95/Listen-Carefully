@@ -23,6 +23,6 @@ class VideoActivityViewModel(
     }
 
     fun release() {
-
+        soundManager.releaseAll()
     }
 }

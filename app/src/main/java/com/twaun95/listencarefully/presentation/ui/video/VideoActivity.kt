@@ -28,7 +28,7 @@ class VideoActivity : BaseActivity<ActivityVideoBinding, VideoActivityViewModel>
 
     override fun onStop() {
         super.onStop()
-        soundManager.releaseAll()
+        viewModel.release()
     }
 
 }

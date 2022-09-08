@@ -1,15 +1,5 @@
 package com.twaun95.listencarefully.presentation.ui.record
 
-import android.Manifest
-import android.app.AlertDialog
-import android.content.Intent
-import android.content.pm.PackageManager
-import android.media.MediaPlayer
-import android.media.MediaRecorder
-import android.net.Uri
-import android.os.Bundle
-import android.provider.Settings
-import android.widget.Toast
 import com.twaun95.listencarefully.R
 import com.twaun95.listencarefully.base.BaseActivity
 import com.twaun95.listencarefully.databinding.ActivityRecordBinding
@@ -25,32 +15,47 @@ class RecordActivity : BaseActivity<ActivityRecordBinding, RecordActivityViewMod
 
     override fun setObserver() {
         super.setObserver()
+        viewModel.recordState.observe(this) {
+            if (it==State.READY_PLAY) binding.viewCountTime.stopCountUp()
+            binding.buttonRecord.update(it)
+        }
 
-        viewModel.recordState.observe(this) { binding.buttonRecord.update(it) }
     }
 
     override fun setEvent() {
         super.setEvent()
+        binding.viewSoundVisual.onRequestCurrentAmplitude = {
+            viewModel.getAmplitude()
+        }
 
         binding.buttonRecord.setOnClickListener {
             when(viewModel.recordState.value!!) {
                 State.IDLE -> {
                     viewModel.startRecord()
+                    binding.viewCountTime.startCountUp()
+                    binding.viewSoundVisual.startVisualizing(false)
                 }
                 State.ON_RECORD -> {
                     viewModel.stopRecord()
+                    binding.viewSoundVisual.stopVisualizing()
                 }
                 State.READY_PLAY -> {
                     viewModel.startPlay()
+                    binding.viewCountTime.startCountUp()
+                    binding.viewSoundVisual.startVisualizing(true)
                 }
                 State.ON_PLAY -> {
                     viewModel.stopPlay()
+                    binding.viewSoundVisual.stopVisualizing()
                 }
             }
         }
 
         binding.buttonReset.setOnClickListener {
             viewModel.reset()
+            binding.viewCountTime.clearCountTime()
+            binding.viewSoundVisual.clearVisualization()
+
         }
     }
 

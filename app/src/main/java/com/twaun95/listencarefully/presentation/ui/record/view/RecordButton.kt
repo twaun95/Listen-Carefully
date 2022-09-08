@@ -16,10 +16,10 @@ class RecordButton(context: Context, attrs: AttributeSet?) : AppCompatButton(con
 
     fun update(state: State){
         background = when(state) {
-            State.IDLE -> ContextCompat.getDrawable(context, R.drawable.ic_record)
-            State.ON_RECORD -> ContextCompat.getDrawable(context, R.drawable.ic_stop)
-            State.READY_PLAY -> ContextCompat.getDrawable(context, R.drawable.ic_play)
-            State.ON_PLAY -> ContextCompat.getDrawable(context, R.drawable.ic_stop)
+            State.IDLE -> ContextCompat.getDrawable(context, R.drawable.record)
+            State.ON_RECORD -> ContextCompat.getDrawable(context, R.drawable.record_stop)
+            State.READY_PLAY -> ContextCompat.getDrawable(context, R.drawable.play)
+            State.ON_PLAY -> ContextCompat.getDrawable(context, R.drawable.pause)
         }
     }
 }

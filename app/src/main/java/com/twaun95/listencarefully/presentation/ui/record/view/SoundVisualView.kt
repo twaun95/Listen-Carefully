@@ -16,7 +16,7 @@ class SoundVisualView(
     var onRequestCurrentAmplitude: (() -> Int)? = null
 
     private val amplitudePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = context.getColor(R.color.purple_500)
+        color = context.getColor(R.color.green3)
         strokeWidth = LINE_WIDTH
         strokeCap = Paint.Cap.ROUND
     }
@@ -89,6 +89,7 @@ class SoundVisualView(
     }
 
     fun clearVisualization() {
+        stopVisualizing()
         drawingAmplitudes = emptyList()
         invalidate()
     }

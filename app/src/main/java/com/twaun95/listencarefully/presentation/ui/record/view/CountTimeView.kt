@@ -11,6 +11,8 @@ class CountTimeView(
     attrs: AttributeSet? = null
 ) : AppCompatTextView(context, attrs) {
 
+    init { clearCountTime() }
+
     private var startTimeStamp: Long = 0L
 
     private val countUpAction: Runnable = object : Runnable {
@@ -33,6 +35,7 @@ class CountTimeView(
     }
 
     fun clearCountTime() {
+        stopCountUp()
         updateCountTime(0)
     }
 

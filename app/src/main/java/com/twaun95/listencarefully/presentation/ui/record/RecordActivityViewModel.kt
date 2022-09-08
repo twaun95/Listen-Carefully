@@ -17,6 +17,10 @@ class RecordActivityViewModel(
         recordHandler.initialize()
     }
 
+    fun getAmplitude() :Int {
+        return recordHandler.getDecibelValue()
+    }
+
     fun startRecord() {
         recordState.value = State.ON_RECORD
         recordHandler.loadFile()
@@ -43,11 +47,15 @@ class RecordActivityViewModel(
     }
 
     fun reset() {
+        recordHandler.stopRecord()
+        soundHandler.pause(soundLoadId)
         recordState.value = State.IDLE
     }
 
     fun release() {
+        soundHandler.pause(soundLoadId)
         soundHandler.releaseAll()
+        recordHandler.release()
     }
 
 }

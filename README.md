@@ -1,17 +1,18 @@
 # LC(Listen-Carefully)
 
+(영상 캡쳐)
 
 # Description
 
 All about sound
 
-사운드와 관련된 모든 것을 다뤄볼 것이다.
+소리와 관련된 모든 것을 다뤄볼 것이다.
 
 # 📂 구성
 1. 효과음
 2. 소리 재생
 3. 영상 재생
-4. 녹음
+4. 녹음 ⭐️
 
 
 # ⚙️ Skills

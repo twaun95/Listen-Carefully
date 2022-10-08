@@ -7,7 +7,7 @@ All about sound
 
 사운드와 관련된 모든 것을 다뤄볼 것이다.
 
-# 📂 Structure
+# 📂 구성
 1. 효과음
 2. 소리 재생
 3. 영상 재생
@@ -38,3 +38,7 @@ All about sound
 - 파형 시각화
 
 # Environment
+- Android Studio Chipmunk 2021.2.1
+- minSdkVersion 26
+- targetSdkVersion 32
+- Test Device - Galaxy S10e

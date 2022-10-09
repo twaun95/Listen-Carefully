@@ -1,6 +1,9 @@
 # LC(Listen-Carefully)
 
-(영상 캡쳐)
+|  배경 색상 변경 | 펜 색상 변경 | 펜 굵기 |
+|:----------:|:----------:|:----------:|
+| <video src="https://user-images.githubusercontent.com/43190509/194696716-9aad7146-2ea4-438f-a1df-c3abcb468518.mp4" width="200" height="400" /> | <video src="https://user-images.githubusercontent.com/43190509/194696790-907b5ba7-d5ca-441f-ac28-31082eb75db0.mp4" width="200" height="400"/> | <video src="https://user-images.githubusercontent.com/43190509/194696797-4c254abd-4394-4582-bc24-fd909b6e6f7a.mp4" width="200" height="400" /> |
+
 
 # Description
 
